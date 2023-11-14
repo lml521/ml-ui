@@ -1,4 +1,3 @@
-import { install } from "vuex";
 
 import mlButton from './index.vue'
 mlButton.install =app =>{
