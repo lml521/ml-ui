@@ -6,6 +6,8 @@
         'ml-button_error': type === 'error',
         'ml-button_warning': type === 'warning',
         'ml-button_disabled': disabled,
+        'ml-button_block': block,
+        'ml-button_round': round,
     }">
         <slot></slot>
     </button>
@@ -23,6 +25,16 @@ export default {
         disabled: {
             type: Boolean,
             default: false
+        },
+        // 块级
+        block: {
+            type: Boolean,
+            default: false
+        },
+        // 圆角边框
+        round:{
+            type: Boolean,
+            default: true
         }
     },
 }
@@ -38,6 +50,7 @@ export default {
     cursor: pointer;
     padding: 12px 24px;
 }
+
 
 .ml-button_disabled {
     opacity: 0.5;
@@ -62,5 +75,13 @@ export default {
 .ml-button_warning {
     color: #fff;
     background-color: #ff9800;
+}
+
+.ml-button_block {
+    display: block ;
+    width: 100%;
+}
+.ml-button_round{
+    border-radius: 20px;
 }
 </style>
